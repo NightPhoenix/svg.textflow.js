@@ -11,7 +11,7 @@ To make an element draggable
 
 ```javascript
 var draw = SVG('canvas').size(400, 400)
-var flow = draw.textflow('Some long text, including \nline breaks.').size()
+var flow = draw.textflow('Some long text, including \nline breaks. Although line breaks are not required unless absolutely necessary for the context.').size(300,200)
 
 flow.font({ family: 'Georgia, serif', size: 36 })
 ```
