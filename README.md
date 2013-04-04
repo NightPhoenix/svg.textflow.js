@@ -16,5 +16,11 @@ var flow = draw.textflow('Some long text, including \nline breaks. Although line
 flow.font({ family: 'Georgia, serif', size: 36 })
 ```
 
+Important note: if you are using custom web fonts, make sure they are fully loaded before using them.
+
+## Example
+Test the [textflow plugin](http://svgjs.com/textflow/) on a resizable and framed flow area.
+
+
 ## Dependencies
 This plugin requires svg.js v0.11.

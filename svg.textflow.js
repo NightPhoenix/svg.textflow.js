@@ -50,9 +50,7 @@ SVG.extend(SVG.Textflow, {
     /* update the content */
     this.content = SVG.regex.test(text, 'isBlank') ? 'text' : text
     
-    this.attr('x', 0).attr(this.styles)
-    
-    return this.attr('textLength', 1).attr('textLength', null)
+    return this.attr('x', 0).attr(this.styles)
   }
   // Define textflow size
 , size: function(width, height) {
