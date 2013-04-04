@@ -18,6 +18,15 @@ flow.font({ family: 'Georgia, serif', size: 36 })
 
 Important note: if you are using custom web fonts, make sure they are fully loaded before using them.
 
+## Overflow
+By default the size of the textflow area is set to 100 px x 100 px. The text flow element will only show the text inside the box, nothing more. If the defined box is too small to show all text content, the overflowing text will be stored in a data attribute:
+
+```javascript
+var overflow = flow.data('overflow')
+```
+
+This makes it possible to create an new textflow element with the remaining content for example.
+
 ## Example
 Test the [textflow plugin](http://svgjs.com/textflow/) on a resizable and framed flow area.
 
