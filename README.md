@@ -34,4 +34,4 @@ Test the [textflow plugin](http://svgjs.com/textflow/) on a resizable and framed
 
 
 ## Dependencies
-This plugin requires svg.js v0.11.
+This plugin requires svg.js v0.12.
