@@ -1,4 +1,4 @@
-// svg.textflow.js 0.3 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
+// svg.textflow.js 0.4 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
 
 SVG.Textflow = function() {
   this.constructor.call(this, SVG.create('text'))
@@ -116,10 +116,6 @@ SVG.extend(SVG.Textflow, {
       lines.push(line)
     }
     
-    /* ensure correct visual position */
-    box = this.bbox()
-    this.transform('y', this._y - box.y)
-    
     /* build textflow */
     i = lines.length
     while (i--) {
@@ -148,6 +144,9 @@ SVG.extend(SVG.Textflow, {
       this.node.removeChild(span.node)
       lines.unshift(span.node.textContent)
     }
+    
+    /* ensure correct visual position */
+    this.transform('y', -size * this._base)
     
     /* save overflow text */
     this.data('overflow', lines.join(' '), true)
