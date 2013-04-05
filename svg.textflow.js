@@ -1,4 +1,4 @@
-// svg.textflow.js 0.2 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
+// svg.textflow.js 0.3 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
 
 SVG.Textflow = function() {
   this.constructor.call(this, SVG.create('text'))

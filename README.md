@@ -27,6 +27,8 @@ var overflow = flow.data('overflow')
 
 This makes it possible to create an new textflow element with the remaining content for example.
 
+Important note: individual words will not be wrapped and will extend outside of the box if the box is too small.
+
 ## Example
 Test the [textflow plugin](http://svgjs.com/textflow/) on a resizable and framed flow area.
 
