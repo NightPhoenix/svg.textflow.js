@@ -1,4 +1,4 @@
-// svg.textflow.js 0.4 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
+// svg.textflow.js 0.5 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
 
 SVG.Textflow = function() {
   this.constructor.call(this, SVG.create('text'))
@@ -17,6 +17,8 @@ SVG.Textflow = function() {
   this._height  = 100
   this._leading = 1.2
   
+  /* store type */
+  this.type = 'textflow'
 }
 
 // Inherit from SVG.Text
