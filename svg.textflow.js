@@ -1,4 +1,4 @@
-// svg.textflow.js 0.5 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
+// svg.textflow.js 0.6 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
 
 SVG.Textflow = function() {
   this.constructor.call(this, SVG.create('text'))
@@ -160,7 +160,7 @@ SVG.extend(SVG.Textflow, {
   }
   // Rebuild
 , rebuild: function(a, v) {
-    if (['font-size', 'font-family'].indexOf(a) > -1)
+    if (['font-size', 'font-family', 'leading'].indexOf(a) > -1)
       this.build().move(this._x, this.attr('y'))
     
     else if (a == 'text-anchor')
