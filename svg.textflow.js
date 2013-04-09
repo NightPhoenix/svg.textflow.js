@@ -1,4 +1,4 @@
-// svg.textflow.js 0.6 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
+// svg.textflow.js 0.7 - Copyright (c) 2013 Wout Fierens - Licensed under the MIT license
 
 SVG.Textflow = function() {
   this.constructor.call(this, SVG.create('text'))
@@ -64,6 +64,7 @@ SVG.extend(SVG.Textflow, {
   // Build 
 , build: function() {
     var i, w, box, sandbox, span, line, words, word
+      , self = this
       , lines = []
       , paragraphs = (this.content || '').split('\n')
       , size = this.styles['font-size']
@@ -155,6 +156,14 @@ SVG.extend(SVG.Textflow, {
     
     /* remove measuring sandbox */
     sandbox.remove()
+    
+    /* HACK ALERT!!! this is a hack for chrome to render text properly. */
+    /* With @font-face chrome som e  ti es   re nder s  t e xt   li k e  thi s */
+    this.style('fill', new SVG.Color(this.attr('fill')).brightness() > 0.5 ? '#999' : '#333')
+    
+    setTimeout(function() {
+      self.style('fill', null)
+    }, 1)
     
     return this
   }
