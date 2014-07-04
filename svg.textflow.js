@@ -135,7 +135,7 @@ SVG.extend(SVG.Textflow, {
       /* create tspan */
       span = new SVG.TSpan().attr('xml:space', 'preserve', 'http://www.w3.org/XML/1998/namespace')
       this.node.appendChild(span.node)
-      this.lines.push(span)
+      this.lines.members.push(span)
       
       /* add text */
       line = lines.shift()
@@ -176,8 +176,8 @@ SVG.extend(SVG.Textflow, {
       this.transform('x', v == 'start' ? 0 : v == 'middle' ? this._width / 2 : this._width)
     
     else if (a == 'x')
-      for (var i = this.lines.length - 1; i >= 0; i--)
-        this.lines[i].attr(a, v)
+      for (var i = this.lines.members.length - 1; i >= 0; i--)
+        this.lines.members[i].attr(a, v)
     
     return this
   }
